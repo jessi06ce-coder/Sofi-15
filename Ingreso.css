@@ -1,0 +1,230 @@
+* {  box-sizing: border-box; }
+
+body{
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        150deg,
+        rgb(141, 42, 42) 0%,
+        #ffe2b6 100%
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+header{
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 20px;
+    background-color: rgba(100, 0, 30, 0.356);
+    border: 2px solid #fff2b6;
+    border-radius: 30px;
+    text-align: center;
+    animation: slideIn 2s ease forwards;
+    position: relative;
+}
+
+h1, h2, button{
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+h1{
+     font-family: "WindSong", cursive;
+  font-weight: bold;
+  font-style: normal;
+    color: rgb(255, 255, 255);
+    animation: slideIn 1s ease forwards;
+    animation-delay: 0.5s;
+    letter-spacing: 0.1em;
+    opacity: 0;
+}
+
+ 
+
+h2{
+ font-family: "Kaushan Script", cursive;
+  font-weight: 200;
+  font-style: normal;
+    color: rgb(255, 186, 186);
+    animation: Slide2 1s ease forwards;
+    animation-delay: 2.2s;
+    letter-spacing: 0.05em;
+    opacity: 0;
+}
+
+button{
+    opacity: 0;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: rgb(255, 234, 165);
+    color: rgb(163, 124, 64);
+    font-family: "cursive";
+    font-weight: 200;
+    font-size: 18px;
+    border-radius: 10px 30px 10px 30px;
+    border: 2px solid rgb(163, 124, 64);
+    transition: all ease-in-out 0.3s;
+    animation: boton 1s ease forwards;
+    animation-delay: 4s;
+}
+
+button:hover{
+    background-color:  rgb(163, 124, 64);
+    color:rgb(255, 234, 165);
+    border: 2px solid rgb(255, 234, 165);
+    font-style: italic;
+    font-size: 6.7vw;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: rgb(255, 126, 126);
+    color: rgb(250, 249, 177);
+}
+
+@keyframes slideIn {
+
+    from{
+        transform: translateY(40px); opacity: 0;
+    }
+
+    to{
+       transform: translateY(0); opacity: 1;
+    }
+    
+}
+
+@keyframes Slide2{
+
+    from{
+      transform: translateY(30px); opacity: 0;   
+    }
+
+    to{
+       transform: translateY(0); opacity: 1;
+    }
+}
+
+@keyframes boton {
+    from{
+     transform: translateY(20px); opacity: 0;
+    }
+  
+    to{
+     transform: translateY(0); opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/*--------> TABLET <-------*/
+
+
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    button{
+        font-size: 20px;
+        padding: 14px 30px;
+    }
+}
+
+
+
+
+
+
+
+/*-----> DESKTOP <-----*/
+
+@media (min-width: 1024px){
+    header{
+        max-width: 600px;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================
+   ROSA EN LA ESQUINA
+   ========================= */
+
+.rosa-decorativa {
+    position: absolute;
+
+    width: 145px;
+    height: auto;
+
+    right: -55px;
+    bottom: -55px;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+    .rosa-decorativa {
+        width: 100px;
+        right: -35px;
+        bottom: -40px;
+    }
+}
+
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {
+    .rosa-decorativa {
+        width: 125px;
+        right: -45px;
+        bottom: -45px;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    .rosa-decorativa {
+        width: 150px;
+        right: -55px;
+        bottom: -55px;
+    }
+}
